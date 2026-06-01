@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
-import { ArrowRight, Sparkles, Brain, Cpu, Database, Network, Camera, Upload, Trash2 } from "lucide-react";
+import { ArrowRight, Sparkles, Brain, Cpu, Database, Network } from "lucide-react";
 
 interface HeroProps {
   isDarkMode: boolean;
@@ -21,17 +21,12 @@ export default function Hero({ isDarkMode, onViewProjects, onContact }: HeroProp
   });
 
   const possibleSrcs = [
+    "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?auto=format&fit=crop&w=400&h=400&q=80",
     "https://www.gravatar.com/avatar/71f62358193c8676ddfcb26633498e5f?s=400",
     "/profile.jpg",
     "/profile.png",
     "/avatar.jpg",
-    "/avatar.png",
-    "/janaki.jpg",
-    "/janaki.png",
-    "/image.jpg",
-    "/image.png",
-    "/janaki_photo.jpg",
-    "/janaki_photo.png"
+    "/avatar.png"
   ];
 
   const handleImageError = () => {
@@ -179,12 +174,12 @@ export default function Hero({ isDarkMode, onViewProjects, onContact }: HeroProp
 
               {/* Inner Artistic Profile Representation */}
               <div className="my-auto py-4 flex flex-col items-center justify-center">
-                <div className="relative mb-4 group">
+                <div className="relative mb-6">
                   {/* Glowing Back-panel */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 blur-md opacity-30 group-hover:opacity-60 transition-opacity duration-300 animate-pulse" />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 blur-md opacity-30 transition-opacity duration-300" />
                   
                   {/* Rounded stylized placeholder */}
-                  <div className="relative w-28 h-28 rounded-full bg-gradient-to-tr from-indigo-950 via-zinc-900 to-purple-950 dark:from-zinc-900 dark:to-zinc-800 flex items-center justify-center text-white border-2 border-zinc-200 dark:border-zinc-800 shadow-[0_8px_32px_rgba(124,58,237,0.15)] overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                  <div className="relative w-28 h-28 rounded-full bg-gradient-to-tr from-indigo-950 via-zinc-900 to-purple-950 dark:from-zinc-900 dark:to-zinc-800 flex items-center justify-center text-white border-2 border-zinc-200 dark:border-zinc-800 shadow-[0_8px_32px_rgba(124,58,237,0.15)] overflow-hidden transition-all duration-300 group-hover:scale-105 z-10">
                     
                     {profilePhoto ? (
                       <img
